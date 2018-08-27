@@ -83,27 +83,27 @@ php lite.php
 }
 
 tkp() {
-clear
+echo \e[1;32m""
 php 1.php
 }
 
 tsl() {
-clear
+echo \e[0;31m""
 php 2.php
 }
 
 mm() {
-clear
+echo \e[1;33m""
 php 3.php
 }
 
 phd() {
-clear
+echo \e[1;33m""
 php 4.php
 }
 
 jdid() {
-clear
+echo \e[1;37m""
 php 5.php
 }
 
