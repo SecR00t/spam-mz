@@ -58,9 +58,9 @@ Class Bom {
         $send = $this->sendC($url, null, $data);
         // echo $send;
         if (preg_match('/otp_attempt_left/', $send)) {
-                print('Succses!');
+                print('Succses!<br>');
             } else {
-                print('Failed!');
+                print('Failed!<br>');
             }
     }
 
