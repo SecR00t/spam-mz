@@ -1,0 +1,113 @@
+#!/bin/bash
+# Spam-Mz v.1.0 | Author: SecR00t
+# Tools LiteOTP is taken from https://github.com/Cvar1984
+# Please don't change the make :D
+
+trap ctrl_c INT
+ctrl_c() {
+echo -e "(CTRL + C) Detected Trying to Exit..."
+sleep 1
+echo -e "Please Wait...(Thank you for using my tools) "
+sleep 1
+echo -e "Contact me SecRo0t@protonmail.com"
+echo -e "Please Enter!"
+read enter
+}
+
+echo -e "Please Wait, Is Checking Requirements..."
+sleep 5
+
+check() {
+
+command -v php > /dev/null 2>&1 || { echo >&2 "You require php for this tools."; exit 1; }
+command -v figlet > /dev/null 2>&1 || { echo >&2 "You require figlet for this tools."; exit 1; }
+
+}
+
+clear
+
+banner() {
+
+echo -e "\e[1;33m_______  _____  _______ _______     \e[1;31m_______ ______ \e[0m"
+echo -e "\e[1;33m|______ |_____] |_____| |  |  | \e[1;32m___ \e[1;31m|  |  |  ____/ \e[0m"
+echo -e "\e[1;33m______| |       |     | |  |  |     \e[1;31m|  |  | /______\e[0m"
+echo -e "\e[0;95m+-------------------------------------------------+\e[0m"
+echo -e "\e[0;95m|\e[0;96m  Author	:     SecR00t\e[0;95m           	  |\e[0m"
+echo -e "\e[0;95m|\e[0;96m  Team		:     Anon Cyber Team\e[0;95m   	  |\e[0m"
+echo -e "\e[0;95m|\e[0;96m  Version	:     1.0\e[0;95m               	  |\e[0m"
+echo -e "\e[0;95m|\e[0;96m  github 	:     https://github.com/SecR00t\e[0;95m  |\e[0m"
+echo -e "\e[0;95m+-------------------------------------------------+\e[0m"
+
+}
+
+menu() {
+
+echo -e "\n\e[1;33mPlease Select:\e[0m"
+echo -e "\e[1;32m01) LiteOTP Note:Usage nano no.txt Wich contains the target number \e[0m"
+echo -e "\e[1;32m02) Tokopedia \e[0m"
+echo -e "\e[1;32m03) Telkomsel \e[0m"
+echo -e "\e[1;32m04) Matahari Mall \e[0m"
+echo -e "\e[1;32m05) PHD \e[0m"
+echo -e "\e[1;32m06) Jd.Id \e[0m"
+echo -e "\e[1;31m00) Exit \e[0m"
+echo -e ""
+read -p $'\e[0;95m[$]> \e[0m' act
+
+if [[ $act == "1" ]] || [[ $act == "01" ]]; then
+liteotp
+elif [[ $act == "2" ]] || [[ $act == "02" ]]; then
+tkp
+elif [[ $act == "3" ]] || [[ $act == "03" ]]; then
+tsl
+elif [[ $act == "4" ]] || [[ $act == "04" ]]; then
+mm
+elif [[ $act == "5" ]] || [[ $act == "05" ]]; then
+phd
+elif [[ $act == "6" ]] || [[ $act == "06" ]]; then
+jdid
+elif [[ $act == "0" ]] || [[ $act == "00" ]]; then
+exit
+else
+echo -e "\e[1;31mNot Found!\e[0m"
+sleep 0.3
+echo -e "\e[0mPlease Wait..."
+sleep 2
+clear
+exit
+fi
+}
+
+liteotp() {
+clear
+php lite.php
+}
+
+tkp() {
+clear
+php 1.php
+}
+
+tsl() {
+clear
+php 2.php
+}
+
+mm() {
+clear
+php 3.php
+}
+
+phd() {
+clear
+php 4.php
+}
+
+jdid() {
+clear
+php 5.php
+}
+
+check
+clear
+banner
+menu
